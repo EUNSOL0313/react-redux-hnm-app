@@ -56,7 +56,7 @@
    padding: 0 auto;
 }
 .product-info div {
-   padding: 10px;
+   margin-top: 10px;
 }
 .product-info div:first-child {
    font-size: 2em;
@@ -73,15 +73,14 @@
 
 #dropdown-basic {
    border: 1px solid lightgray;
-   width: 100%;
    background-color: white;
    color: black;
 }
+
 .add-button {
    background-color: black;
    color: white;
    width: 100%;
-   margin-top: 10px;
 }
 
 @media screen and (max-width: 63rem) {
