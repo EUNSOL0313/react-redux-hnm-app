@@ -19,6 +19,6 @@
 ### my-Json Sever이용해서 API만들기
 과정화면 img가 출력이 안되는데 에러가 잡히지 않는다.
 
-![image](width :1000 https://github.com/EUNSOL0313/hnm-react-router-practice/assets/159598570/49e633b4-0cbb-41e7-bfa5-34b2ab478365)
+![image](https://github.com/EUNSOL0313/hnm-react-router-practice/assets/159598570/49e633b4-0cbb-41e7-bfa5-34b2ab478365)
 ![image](https://github.com/EUNSOL0313/hnm-react-router-practice/assets/159598570/9929eb4e-ddd7-44a1-8c35-5ff6fdc289fb)
 ![image](https://github.com/EUNSOL0313/hnm-react-router-practice/assets/159598570/7bce8c79-93cc-4799-9202-2a6710206515)
