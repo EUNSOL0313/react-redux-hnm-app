@@ -3,6 +3,7 @@
    justify-content: flex-end;
    align-items: center;
    margin: 20px;
+   cursor: pointer;
 }
 .login-button div {
    padding-left: 10px;
@@ -11,10 +12,12 @@
 .nav-section {
    display: flex;
    justify-content: center;
+   cursor: pointer;
 }
 .menu-list {
    display: flex;
    list-style: none;
+   cursor: pointer;
 }
 .menu-list li {
    padding: 10px;
@@ -30,6 +33,7 @@
    position: absolute;
    right: 20px;
    padding: 5px;
+   cursor: pointer;
 }
 .search-box input {
    border: none;
@@ -37,4 +41,54 @@
 }
 .search-box input:focus {
    outline: none;
+}
+
+.product-card:hover {
+   transform: scale(1.1);
+   z-index: 1;
+}
+
+.product-img {
+   display: flex;
+   justify-content: flex-end;
+}
+.product-info {
+   padding: 0 auto;
+}
+.product-info div {
+   padding: 10px;
+}
+.product-info div:first-child {
+   font-size: 2em;
+   font-weight: 500;
+}
+.product-info div:nth-child(2) {
+   font-size: 1em;
+   font-weight: 500;
+}
+.product-info div:nth-child(3) {
+   font-size: 0.8em;
+   font-weight: 400;
+}
+
+#dropdown-basic {
+   border: 1px solid lightgray;
+   width: 100%;
+   background-color: white;
+   color: black;
+}
+.add-button {
+   background-color: black;
+   color: white;
+   width: 100%;
+   margin-top: 10px;
+}
+
+@media screen and (max-width: 63rem) {
+   .menu {
+      display: none;
+   }
+   .search-box {
+      display: none;
+   }
 }
