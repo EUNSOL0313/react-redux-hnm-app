@@ -1,11 +1,13 @@
-import { Button } from 'bootstrap'
-import React, { useEffect, useState } from 'react'
-import { Container, Row, Col, Dropdown } from 'react-bootstrap'
+import React, { useEffect, useState, useCallback } from 'react'
+import { Container, Row, Col, Form } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartShopping, faShop } from '@fortawesome/free-solid-svg-icons'
 
 const ProductDetail = () => {
    let { id } = useParams()
    const [product, setProduct] = useState(null)
+   const [productOption, setProductOption] = useState([])
    const getProductDetail = async () => {
       let url = `https://my-json-server.typicode.com/EUNSOL0313/hnm-react-router-practice/products/${id}`
       let response = await fetch(url)
@@ -13,38 +15,47 @@ const ProductDetail = () => {
       console.log('data', data)
       setProduct(data)
    }
+
    useEffect(() => {
       getProductDetail()
    }, [])
 
    return (
-      <div>
+      <div className="productDetail-wrap">
          <Container>
             <Row>
-               <Col className="product-img">
-                  <img src={product?.img} />
+               <Col lg="5" className="product-img">
+                  <img src={product?.img} alt={product?.title} />
                </Col>
-               <Col className="product-info">
-                  <div>{product?.title}</div>
-                  <div>₩ {product?.price}</div>
-                  <div>{product?.choice == true ? 'Conscious choice' : ''}</div>
-                  <div>
-                     {' '}
-                     <Dropdown>
-                        <Dropdown.Toggle variant="Secondary" id="dropdown-basic">
-                           사이즈 선택
-                        </Dropdown.Toggle>
+               <Col lg="7" className="product-info">
+                  <div className="name ">{product?.title}</div>
+                  <div className="price ">₩ {product?.price}</div>
+                  <div className="choice ">{product?.choice == true ? 'Conscious choice' : ''}</div>
+                  <ul className="size">
+                     {product?.size.map((item, index) => (
+                        <li key={index}>{item}</li>
+                     ))}
+                  </ul>
+                  <div className="add-button">
+                     <FontAwesomeIcon icon={faCartShopping} /> <span>추가</span>
+                  </div>
 
-                        <Dropdown.Menu>
-                           <Dropdown.Item href="#/action-1">S</Dropdown.Item>
-                           <Dropdown.Item href="#/action-2">M</Dropdown.Item>
-                           <Dropdown.Item href="#/action-3">L</Dropdown.Item>
-                        </Dropdown.Menu>
-                     </Dropdown>
-                  </div>
-                  <div className="d-grid gap-2 ">
-                     <button className="add-button">추가</button>
-                  </div>
+                  <ul className="shop-info">
+                     <li>
+                        <FontAwesomeIcon icon={faShop} />
+                        <span>매장별 제품 찾기</span>
+                     </li>
+                     <li>
+                        <i className="xi-error-o"></i>
+                        배송기간 : 영업일 기준 2~3일
+                     </li>
+                  </ul>
+
+                  <ul className="detail-guide">
+                     <li>설명&핏</li>
+                     <li>소재</li>
+                     <li>케어가이드</li>
+                  </ul>
                </Col>
             </Row>
          </Container>

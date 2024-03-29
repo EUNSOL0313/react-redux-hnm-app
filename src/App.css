@@ -1,6 +1,17 @@
 img {
    width: 100%;
 }
+.nav-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-right: 20px;
+}
+.nav-header * {
+   margin-right: 10px;
+   margin-top: 20px;
+}
+
 .login-button {
    display: flex;
    justify-content: flex-end;
@@ -11,6 +22,16 @@ img {
 .login-button div {
    padding-left: 10px;
 }
+.login-area {
+   display: flex;
+   justify-content: center;
+}
+.login-form {
+   width: 40em;
+}
+.form-control:valid {
+   background-color: white !important;
+}
 
 .nav-section {
    display: flex;
@@ -19,6 +40,7 @@ img {
 }
 .nav-section .logo {
    width: 100px;
+   margin-bottom: 20px;
 }
 .menu-list {
    display: flex;
@@ -28,7 +50,9 @@ img {
 .menu-list li {
    padding: 10px;
 }
-
+.burger-menu {
+   margin-left: 20px;
+}
 .menu-area {
    display: flex;
    justify-content: center;
@@ -55,12 +79,34 @@ img {
 }
 
 .product-img {
+   height: 85vh;
    display: flex;
    justify-content: flex-end;
+}
+.product-title {
+   font-size: 1.3em;
+   font-weight: 600;
 }
 .product-info {
    padding: 0 auto;
 }
+.choice {
+   font-size: 11px;
+   color: #63786a;
+   font-weight: bold;
+   height: 20px;
+}
+.new-product {
+   font-size: 11px;
+   height: 20px;
+}
+.productDetail_wrap {
+   margin-top: 20px;
+}
+.product_detail {
+   margin-top: 10px;
+}
+
 .product-info div {
    margin-top: 10px;
 }
@@ -69,31 +115,128 @@ img {
    font-weight: 500;
 }
 .product-info div:nth-child(2) {
-   font-size: 1em;
+   font-size: 1.5em;
    font-weight: 500;
 }
 .product-info div:nth-child(3) {
-   font-size: 0.8em;
-   font-weight: 400;
+   color: #63786a;
+   line-height: 1em;
+   font-size: 0.9em;
+   font-weight: 500;
+   margin-bottom: 10px;
 }
 
-#dropdown-basic {
-   border: 1px solid lightgray;
-   background-color: white;
-   color: black;
+.size {
+   display: flex;
+   padding-left: 0;
 }
-
-.add-button {
+.size li {
+   list-style: none;
+   padding: 3px 20px;
+   border: 1px solid black;
+   cursor: pointer;
+}
+.size li:nth-child(2) {
+   border-right: 0px;
+   border-left: 0px;
+}
+.size li:hover {
    background-color: black;
    color: white;
-   width: 100%;
+}
+.shop-info {
+   padding: 30px 0 0 0;
+   font-size: 0.8em;
+}
+.shop-info li {
+   list-style: none;
+   margin: 2px 0;
+}
+.shop-info li span {
+   padding-left: 10px;
+}
+.add-button {
+   margin-top: 30px;
+   background-color: black;
+   color: #fff;
+   text-align: center;
+   padding: 7px 0;
+   cursor: pointer;
+}
+
+.detail-guide {
+   padding-left: 0;
+   margin-top: 40px;
+   border-top: 1px solid gray;
+   border-bottom: 1px solid gray;
+   font-size: 16px;
+}
+.detail-guide li {
+   list-style: none;
+   padding: 10px 20px;
+   cursor: pointer;
+}
+.detail-guide li:nth-child(2) {
+   border-top: 1px solid gray;
+   border-bottom: 1px solid gray;
+}
+.detail-guide li:hover {
+   color: red;
+}
+
+.hide {
+   visibility: hidden;
 }
 
 @media screen and (max-width: 63rem) {
+   .hide {
+      visibility: visible;
+   }
    .menu {
       display: none;
    }
    .search-box {
       display: none;
    }
+}
+.side-menu {
+   height: 100%;
+   width: 250px;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: rgb(232, 230, 230);
+   overflow-x: hidden;
+   transition: 0.5s;
+   padding-top: 60px;
+   z-index: 2;
+}
+.side-menu-list button {
+   margin: 5px;
+   border: none;
+   background: none;
+   width: 120px;
+}
+
+.side-menu .close-btn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+   border: none;
+   background: none;
+}
+
+.side-menu-list {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.side-menu-list button:hover {
+   background-color: rgb(136, 135, 135);
+   color: white;
+   border-radius: 3px;
 }

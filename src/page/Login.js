@@ -14,9 +14,9 @@ const Login = ({ setAuthenticate }) => {
    }
 
    return (
-      <Container>
+      <Container className="login-area">
          {/* Form 에서 type=submit이면 onclick이벤트 안됨 onsubmit을 사용해야한다 */}
-         <Form onSubmit={(event) => loginUser(event)}>
+         <Form className="login-form" onSubmit={(event) => loginUser(event)}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                <Form.Label>Email address</Form.Label>
                <Form.Control type="email" placeholder="Enter email" />
@@ -31,7 +31,7 @@ const Login = ({ setAuthenticate }) => {
                <Form.Check type="checkbox" label="Check me out" />
             </Form.Group>
             <Button variant="danger" type="submit">
-               Log-in
+               로그인
             </Button>
          </Form>
       </Container>

@@ -8,11 +8,11 @@ const ProductCard = ({ item }) => {
    }
    return (
       <div className="product-card" onClick={showDetail}>
-         <img src={item?.img} />
-         <div>{item?.choice == true ? 'Conscious choice' : ''}</div>
-         <div>{item?.title}</div>
+         <img src={item?.img} alt={item?.title} />
+         <div className="choice">{item?.choice == true ? 'Conscious choice' : ''}</div>
+         <div className="product-title">{item?.title}</div>
          <div>₩ {item?.price}</div>
-         <div>{item?.new == true ? '신제품' : ''}</div>
+         <div className="new-product">{item?.new == true ? '신제품' : ''}</div>
       </div>
    )
 }
