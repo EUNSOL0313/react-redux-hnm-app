@@ -2,7 +2,7 @@
 
 ## H&M 홈페이지만들기
 
-## URL : 
+## URL : https://sol-hnm-react-project.netlify.app
 
 ### USER Story
 1. 전체상품페이지, 로그인, 상품상세페이지.
@@ -17,8 +17,10 @@
 9. 상품을  검색할 수 있다.
 
 ### my-Json Sever이용해서 API만들기
-과정화면 img가 출력이 안되는데 에러가 잡히지 않는다.
+## 미리보기
 
-![image](https://github.com/EUNSOL0313/hnm-react-router-practice/assets/159598570/49e633b4-0cbb-41e7-bfa5-34b2ab478365)
+![image](https://github.com/EUNSOL0313/hnm-react-router-practice/assets/159598570/2b6ab9f8-1d59-4eca-9a29-68897baf1d56)
 ![image](https://github.com/EUNSOL0313/hnm-react-router-practice/assets/159598570/9929eb4e-ddd7-44a1-8c35-5ff6fdc289fb)
-![image](https://github.com/EUNSOL0313/hnm-react-router-practice/assets/159598570/7bce8c79-93cc-4799-9202-2a6710206515)
+![image](https://github.com/EUNSOL0313/hnm-react-router-practice/assets/159598570/e4913ed7-146c-4474-b815-fe88488d8122)
+
+
