@@ -192,7 +192,7 @@ img {
    .hide {
       visibility: visible;
    }
-   .menu {
+   .menu-list {
       display: none;
    }
    .search-box {
