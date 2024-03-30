@@ -21,6 +21,7 @@
 
 ![image](https://github.com/EUNSOL0313/hnm-react-router-practice/assets/159598570/2b6ab9f8-1d59-4eca-9a29-68897baf1d56)
 ![image](https://github.com/EUNSOL0313/hnm-react-router-practice/assets/159598570/9929eb4e-ddd7-44a1-8c35-5ff6fdc289fb)
-![image](https://github.com/EUNSOL0313/hnm-react-router-practice/assets/159598570/e4913ed7-146c-4474-b815-fe88488d8122)
+![image](https://github.com/EUNSOL0313/hnm-react-router-practice/assets/159598570/9177fe90-01dd-491f-a395-fed01957597c)
+
 
 
