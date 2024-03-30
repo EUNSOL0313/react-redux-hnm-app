@@ -11,6 +11,10 @@ img {
    margin-right: 10px;
    margin-top: 20px;
 }
+.nav-rightSide {
+   display: flex;
+   justify-content: flex-start;
+}
 
 .login-button {
    display: flex;
@@ -59,15 +63,16 @@ img {
 }
 
 .search-box {
-   border-bottom: 1px solid black;
+   /* border-bottom: 1px solid black; */
    position: absolute;
-   right: 20px;
+   right: 120px;
+   margin-top: 1.2em;
    padding: 5px;
    cursor: pointer;
 }
 .search-box input {
    border: none;
-   margin-left: 5px;
+   width: 100px;
 }
 .search-box input:focus {
    outline: none;
@@ -193,9 +198,6 @@ img {
       visibility: visible;
    }
    .menu-list {
-      display: none;
-   }
-   .search-box {
       display: none;
    }
 }
