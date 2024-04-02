@@ -4,6 +4,8 @@
 
 ## URL : https://sol-hnm-react-project.netlify.app
 
+## 추가 개선사항 : useState를 사용하는 size값도 변경해서 수정해놓기.(24.04.02)
+
 ### USER Story
 1. 전체상품페이지, 로그인, 상품상세페이지.
 1-1. NavigationBar 만들기.
