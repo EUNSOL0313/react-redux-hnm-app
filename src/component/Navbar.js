@@ -5,18 +5,23 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 import { Link, useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { authenticateAction } from '../redux/actions/authenticateAction'
 
-const Navbar = ({ authenticate, setAuthenticate }) => {
+const Navbar = () => {
    const menuList = ['여성', 'Divided', '남성', '신생아/유아', '아동', 'H&M Home', 'Sale', '지속가능성']
+   const navigate = useNavigate()
+   const dispatch = useDispatch()
+   const authenticate = useSelector((state) => state.auth.authenticate)
+
    const [width, setWidth] = useState(0)
    const [inputVisible, setInputVisible] = useState(false)
-   const navigate = useNavigate()
 
    const goToLogin = () => {
       navigate('/login')
    }
    const goToLogout = () => {
-      setAuthenticate(false)
+      dispatch(authenticateAction.logout())
       navigate('/')
    }
    const openSearchBox = () => {

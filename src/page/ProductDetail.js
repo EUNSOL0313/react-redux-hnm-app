@@ -1,19 +1,21 @@
-import React, { useEffect, useState, useCallback } from 'react'
-import { Container, Row, Col, Form } from 'react-bootstrap'
+import React, { useState, useEffect } from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faShop } from '@fortawesome/free-solid-svg-icons'
 
+import { useDispatch, useSelector } from 'react-redux'
+import { productAction } from '../redux/actions/productAction'
+
 const ProductDetail = () => {
    let { id } = useParams()
-   const [product, setProduct] = useState(null)
-   const [productOption, setProductOption] = useState([])
-   const getProductDetail = async () => {
-      let url = `https://my-json-server.typicode.com/EUNSOL0313/hnm-react-router-practice/products/${id}`
-      let response = await fetch(url)
-      let data = await response.json()
-      console.log('data', data)
-      setProduct(data)
+   // const [product, setProduct] = useState(null)
+   const product = useSelector((state) => state.product.selectedItem)
+   // const [productOption, setProductOption] = useState([])
+   const dispatch = useDispatch()
+
+   const getProductDetail = () => {
+      dispatch(productAction.getProductDetail(id))
    }
 
    useEffect(() => {
